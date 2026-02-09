@@ -58,23 +58,9 @@ public class PhoneBook {
                 .collect(Collectors.toList());
 
         return filtred;
-//         for (Contact c : contacts) {
-//            if (c.name.toLowerCase().contains(part.toLowerCase())) {
-//                search.add(c);
-//            }
-//        }
-
-//        if (search.isEmpty()) {
-//            System.out.println("Ничего не найдено");
-//        } else {
-//            for (Contact c : search) {
-//                System.out.println(c);
-//            }
-//        }
     }
     public void sortBy(Comparator<Contact>) {
-                Collections.sort(contacts, (a, b) -> a.getName().compareTo(b.getName()));
-                Collections.sort(contacts, (a, b) -> a.getPhoneNumber().compareTo(b.getPhoneNumber()));
+                contacts.sort(contacts);
             }
 }
 
