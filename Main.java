@@ -66,13 +66,21 @@ public class Main {
                         System.out.println("Контакт не найден");
                     }
                 }
-                case 6 -> {
+               case 6 -> {
                     sc.nextLine();
                     System.out.println("Как произвести сортировку?");
-                    System.out.println("\n1.По имени\n" +
-                            "2. По номеру\n");
-                    System.out.println("Выполняется сортировка :");
-                    book.sortBy((a, b ) -> a.getPhoneNumber().compareTo(b.getPhoneNumber()));
+                    System.out.println("\n1. По имени\n2. По номеру");
+                    int choice = sc.nextInt();
+
+                    if (choice == 1) {
+                        book.sortBy((a, b) -> a.getName().compareTo(b.getName()));
+                    } else if (choice == 2) {
+                        book.sortBy((a, b) -> a.getPhoneNumber().compareTo(b.getPhoneNumber()));
+                    } else {
+                        System.out.println("Неверный выбор.");
+                    }
+
+                    System.out.println("Отсортированные контакты:");
                     book.showContacts();
                 }
 
