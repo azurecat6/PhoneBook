@@ -3,7 +3,7 @@ package lessons;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class PhoneBook {
+public class PhoneBook implements Runnable {
 
     private List<Contact> contacts = new ArrayList<>();
 
